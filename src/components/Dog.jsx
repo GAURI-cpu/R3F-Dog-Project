@@ -57,7 +57,6 @@ const Dog = () => {
           endTrigger:"#section-3",
           start:"top top",
           end:"bottom bottom",
-          markers:true,
           scrub:true
         }
       })
@@ -81,7 +80,7 @@ const Dog = () => {
   return (
     <>
     { /*use for render pre built model*/ }
-    <primitive object={model.scene} position={[0.25,-0.5,0]} rotation={[0,Math.PI/4.3,0]}/>
+    <primitive object={model.scene} position={[0.25,-0.55,0.08]} rotation={[0,Math.PI/4.9,0]}/>
     <directionalLight position={[0,5,5]} color={0xffffff} intensity={10}/>
     </>
   )

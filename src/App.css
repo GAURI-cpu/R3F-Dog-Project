@@ -17,3 +17,27 @@ section{
   position: relative;
   z-index: 2;
 }
+.middle{
+  display: flex;
+
+  .left,.right{
+    width: 50%;
+  }
+  .left{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  h1{
+    font-size: 6rem;
+    color: white;
+    line-height: 1;
+    text-align: right;
+  }
+}
+
+.bottom{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
