@@ -30,8 +30,8 @@ const Dog = () => {
       matcap:sampleMatcap
     })
     const branches= new THREE.MeshMatcapMaterial({
-      normalMap:branchesNormalMap,
-      map:branchesMap
+      normalMap:branchesMap,
+      map:branchesNormalMap
     })
 
     model.scene.traverse((child)=>{
@@ -51,6 +51,7 @@ const Dog = () => {
     },[actions])
 
     useGSAP(()=>{
+
       const tl = gsap.timeline({
         scrollTrigger:{
           trigger:"#section-1",
@@ -63,10 +64,14 @@ const Dog = () => {
       tl.
       to(dogModel.current.scene.position,{
         z:"-=0.75",
-        y:"+=0.1"
+        y:"+=0.1",
+        duration:1,
+        ease:"power2.out",
+        scrub:true
       })
       .to(dogModel.current.scene.rotation,{
-        x:`+=${Math.PI/12}`
+        x:`+=${Math.PI/12}`,
+        duration:1,
       })
       .to(dogModel.current.scene.rotation,{
         y:`-=${Math.PI}`
@@ -77,10 +82,11 @@ const Dog = () => {
         y:"-=0.01"
       },"third"/*tag*/)
     },[])
+
   return (
     <>
     { /*use for render pre built model*/ }
-    <primitive object={model.scene} position={[0.25,-0.55,0.08]} rotation={[0,Math.PI/4.9,0]}/>
+    <primitive  object={model.scene} position={[0.25,-0.55,0.15]} rotation={[0,Math.PI/4.9,0]}/>
     <directionalLight position={[0,5,5]} color={0xffffff} intensity={10}/>
     </>
   )

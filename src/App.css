@@ -13,13 +13,12 @@ main{
 }
 section{
   min-height: 100vh;
-  border: 1px solid white;
   position: relative;
   z-index: 2;
 }
 .middle{
   display: flex;
-
+  gap:3rem;
   .left,.right{
     width: 50%;
   }
@@ -40,4 +39,138 @@ section{
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  margin-top: 9rem;
+  gap: 3rem;
+
+  .left,.right{
+    width: 50%;
+  }
+  p{
+    color: white;
+    font-family:cursive;
+    margin-left: 4rem;
+    font-size: 1.3rem;
+  }
+  .para{
+    --myColor:rgb(140, 140, 243);
+    color: var(--myColor);
+    font-size: 0.9rem;
+    margin-top: 1.3rem;
+    font-family: cursive;
+  }
+}
+.first-line{
+  width: 30rem;
+  height: 1px;
+  background-color: rgb(136, 47, 47);
+  position: absolute;
+  transform: rotate(45deg) translate(0,-20rem);
+
+}
+.second-line{
+  width: 10rem;
+  height: 1px;
+  background-color: rgb(136, 47, 47);
+  position: absolute;
+  transform: rotate(135deg);
+  top: 28%;
+  right: 15%;
+}
+
+.titles {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10rem;
+  padding-inline: 6rem;
+  gap:2rem;
+}
+
+.title {
+  display: flex;
+  gap: 5rem;
+  opacity: 0.2;
+  padding-block: 1rem;
+  color: white;
+  font-family: sans-serif;
+  transition: all 0.3s linear;
+}
+.title:hover{
+  opacity: 1;
+  cursor: pointer;
+}
+h1{
+  font-size: 5rem;
+  font-weight: 100;
+  line-height: 1;
+}
+small{
+  margin-top: 2rem;
+}
+small:hover{
+  color: rgb(140, 140, 243);
+  cursor: pointer;
+}
+/* from now how we change the background */
+#canvas-elem::after{
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-image: url(/background.png);
+        background-repeat:no-repeat;
+        background-size: cover;
+  transition: all 0.3s linear;
+}
+
+main:has(#section-2 .title:hover) #canvas-elem::after{
+  opacity: 0;
+}
+.images{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+
+  img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all 0.3s linear;
+  }
+}
+main:has(#section-2 .title[img-title="tommorowland"]:hover) .images #tommorowland{
+  opacity: 1;
+  background-color: rgb(7, 4, 47);
+}
+main:has(#section-2 .title[img-title="navy-pier"]:hover) .images #navy-pier{
+  opacity: 1;
+  background-color: rgb(7, 4, 47);
+}
+main:has(#section-2 .title[img-title="msi-chicago"]:hover) .images #msi-chicago{
+  opacity: 1;
+  background-color: rgb(7, 4, 47);
+}
+main:has(#section-2 .title[img-title="phone"]:hover) .images #phone{
+  opacity: 1;
+  background-color: rgb(7, 4, 47);
+}
+main:has(#section-2 .title[img-title="kikk"]:hover) .images #kikk{
+  opacity: 1;
+  background-color: rgba(9, 3, 91, 0.777);
+}
+main:has(#section-2 .title[img-title="kennedy"]:hover) .images #kennedy{
+  opacity: 1;
+  background-color: rgb(7, 4, 47);
+}
+main:has(#section-2 .title[img-title="opera"]:hover) .images #opera{
+  opacity: 1;
+  background-color: rgb(171, 13, 13);
 }
