@@ -37,6 +37,12 @@ function App() {
     repeat: -1,
     yoyo: true
   });
+  tl.to(".smallpara",{
+    "--myColor": "#d35aa7",
+    duration:1,
+    repeat:-1,
+    yoyo:true
+  })
 
 }, []);
   return (
@@ -149,7 +155,15 @@ function App() {
           </div>
         </div>
       </section>
-      <section id='section-3'></section>
+      <section id='section-3'>
+        <div className="start">
+          <div className="leftStart">
+            <p className='smallpara'>THIS IS HOW WE START</p>
+            <h2>We'r crafting <br />emotional <br />experiences aims <br />at improving <br />results</h2>
+          </div>
+          <div className="rightStart"></div>
+        </div>
+      </section>
     </main>
     
     </>
