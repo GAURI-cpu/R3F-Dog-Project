@@ -164,6 +164,24 @@ function App() {
           <div className="rightStart"></div>
         </div>
       </section>
+      
+      <section id="section-4">
+        <div className="end">
+          <div className="leftend"></div>
+          <div className="rightend">
+            <p>
+              Dogstudio is a design & <br /> technology firm working globally <br />from our offices based in <br />Belgium and Chicago. <br />  
+             Our strong focus on producing <br />high quality & emotional <br />brandings, digital products and <br />experiences became a signature.
+             </p>
+             <p>
+              We’re passionate about moving <br />people and solving problems for <br />the likes of Microsoft, 
+             The <br /> Museum of Science And Industry <br />Of Chicago, The Kennedy Center <br />of Washington, Dragone, 
+             Quanta <br />Magazine, and many more.
+             </p>
+
+          </div>
+        </div>
+      </section>
     </main>
     
     </>

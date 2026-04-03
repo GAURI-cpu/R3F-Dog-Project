@@ -177,16 +177,19 @@ main:has(#section-2 .title[img-title="opera"]:hover) .images #opera{
 
 #section-3{
   display: flex;
-  margin-top: 13rem;
   color: white;
   position: relative;
   z-index: 0;
+  padding-block: 10rem;
+  padding-inline: 10rem;
+  min-height: initial;
   
   .leftStart,.rightStart{
     width: 50%;
   }
   .leftStart{
-    margin-left:25rem;
+    margin-left:10rem;
+
   }
   p{
     font-size: 0.8rem;
@@ -205,4 +208,36 @@ main:has(#section-2 .title[img-title="opera"]:hover) .images #opera{
     font-weight: 400;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
+  
+}
+#section-4 {
+       /* 🔥 ABOVE canvas */
+  margin-right: 20rem;
+  white-space: nowrap;
+  color: white;
+  align-items: flex-start;
+
+}
+
+#section-4 .end {
+  display: flex;
+}
+
+#section-4 .leftend,
+#section-4 .rightend {
+  width: 50%;
+}
+
+/* RIGHT TEXT (main content) */
+#section-4 .rightend {
+  display: flex;
+  gap: 3rem;
+  justify-content: flex-end;
+}
+
+#section-4 .rightend p {
+  max-width: 300px;
+  line-height: 1.6;
+  font-size: 0.9rem;
+  color: white;
 }

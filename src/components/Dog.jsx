@@ -159,7 +159,6 @@ const Dog = () => {
                 endTrigger: "#section-3",
                 start: "top top",
                 end: "bottom bottom",
-                markers: true,
                 scrub: true
             }
         })
@@ -170,8 +169,9 @@ const Dog = () => {
                 y: "+=0.1"
             })
             .to(dogModel.current.scene.rotation, {
-                x: `+=${Math.PI / 15}`
-            })
+                x: `+=${Math.PI / 15}`,
+                
+            },"second")
             .to(dogModel.current.scene.rotation, {
                 y: `-=${Math.PI}`,
 
@@ -181,6 +181,7 @@ const Dog = () => {
                 z: "+=0.6",
                 y: "-=0.05"
             }, "third")
+            
 
     }, [])
 
